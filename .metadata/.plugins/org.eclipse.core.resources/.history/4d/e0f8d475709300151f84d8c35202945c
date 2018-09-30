@@ -1,0 +1,35 @@
+/*
+ ============================================================================
+ Name        : MinicursoThrust.cu
+ Author      : 
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Compute sum of reciprocals using STL on CPU and Thrust on GPU
+ ============================================================================
+ */
+
+#include <algorithm>
+#include <iostream>
+#include <numeric>
+#include <vector>
+
+#include <thrust/reduce.h>
+#include <thrust/device_vector.h>
+
+using namespace std;
+
+int main(void) {
+	thrust::host_vector<int> h_vec(100);
+
+	for (int i = 0; i < h_vec.size(); ++i) {
+		h_vec[i] = i;
+	}
+
+	thrust::device_vector<int> d_vec = h_vec;
+
+	int resultado = thrust::reduce(d_vec.begin(), d_vec.end());
+
+	cout << "soma = " << resultado << endl;
+
+	return 0;
+}

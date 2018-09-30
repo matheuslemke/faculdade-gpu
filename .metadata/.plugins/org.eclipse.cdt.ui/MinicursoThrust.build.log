@@ -1,0 +1,13 @@
+11:18:51 **** Incremental Build of configuration Debug for project MinicursoThrust ****
+make all 
+Building file: ../src/MinicursoThrust.cu
+Invoking: NVCC Compiler
+/usr/local/cuda-7.5/bin/nvcc -G -g -O0 -gencode arch=compute_20,code=sm_20  -odir "src" -M -o "src/MinicursoThrust.d" "../src/MinicursoThrust.cu"
+../src/MinicursoThrust.cu:15:42: fatal error: thrust/make_transform_iterator: Arquivo ou diretório não encontrado
+ #include <thrust/make_transform_iterator>
+                                          ^
+compilation terminated.
+make: ** [src/MinicursoThrust.o] Erro 1
+
+11:18:52 Build Finished (took 363ms)
+

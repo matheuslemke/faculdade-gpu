@@ -1,0 +1,15 @@
+14:37:33 **** Incremental Build of configuration Debug for project Teste ****
+make all 
+Building file: ../src/Teste.cu
+Invoking: NVCC Compiler
+/usr/local/cuda-7.5/bin/nvcc -G -g -O0 -gencode arch=compute_20,code=sm_20  -odir "src" -M -o "src/Teste.d" "../src/Teste.cu"
+/usr/local/cuda-7.5/bin/nvcc -G -g -O0 --compile --relocatable-device-code=false -gencode arch=compute_20,code=compute_20 -gencode arch=compute_20,code=sm_20  -x cu -o  "src/Teste.o" "../src/Teste.cu"
+../src/Teste.cu(64): error: identifier "blockId" is undefined
+
+../src/Teste.cu(85): error: argument of type "const int (*)[5]" is incompatible with parameter of type "void *"
+
+2 errors detected in the compilation of "/tmp/tmpxft_00001224_00000000-7_Teste.cpp1.ii".
+make: ** [src/Teste.o] Erro 2
+
+14:37:34 Build Finished (took 1s.364ms)
+
